@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fillicianoplong.github.io/sitemap-index.xml

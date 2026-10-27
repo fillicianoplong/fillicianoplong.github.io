@@ -1,0 +1,43 @@
+---
+import { site } from "../data/site";
+
+const links = [
+  { label: "Projects", href: "#projects", external: false, rel: undefined },
+  { label: "Email", href: `mailto:${site.email}`, external: false, rel: undefined },
+  { label: "GitHub", href: site.github, external: true, rel: "me noreferrer" },
+  { label: "LinkedIn", href: site.linkedin, external: true, rel: "me noreferrer" },
+];
+---
+
+<section id="about" class="about">
+  <div class="about-wash" aria-hidden="true"></div>
+  <canvas data-about-field class="about-field" aria-hidden="true"></canvas>
+  <div class="about-scrim" aria-hidden="true"></div>
+  <div class="about-copy wrap">
+    <h1 class="display text-[clamp(2.75rem,8vw,5.75rem)] leading-[0.98]">{site.name}</h1>
+    <p class="mt-4 max-w-xl text-lg leading-snug sm:text-xl">Building websites, apps, and test automation.</p>
+    <ul class="mt-6 flex flex-wrap gap-x-5 gap-y-1 text-sm">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              class="inline-flex min-h-11 items-center underline decoration-1 underline-offset-4"
+              href={link.href}
+              rel={link.rel}
+              target={link.external ? "_blank" : undefined}
+            >
+              {link.label}
+              {link.external && <span class="sr-only"> (opens in a new tab)</span>}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<script>
+  import { startAboutField } from "../scripts/about-field";
+
+  startAboutField();
+</script>
