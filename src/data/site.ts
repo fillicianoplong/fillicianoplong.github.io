@@ -1,8 +1,7 @@
 export const site = {
   name: "Filliciano Plong",
   title: "Filliciano Plong",
-  description:
-    "Building websites, apps, and test automation. Computer Science student at CSU Dominguez Hills.",
+  description: "Building websites, apps, and test automation.",
   url: "https://fillicianoplong.github.io",
   email: "fillicianoplong@gmail.com",
   github: "https://github.com/fillicianoplong",
@@ -13,9 +12,7 @@ export const site = {
 export const nav = [
   { href: "/#about", label: "About" },
   { href: "/#projects", label: "Projects" },
-  { href: "/#experience", label: "Experience" },
   { href: "/#skills", label: "Skills" },
-  { href: "/#education", label: "Education" },
   { href: "/#contact", label: "Contact" },
 ] as const;
 
@@ -26,7 +23,7 @@ export const projects = [
     status: "In progress",
     stack: ["TypeScript", "React", "Electron"],
     summary:
-      "Local-first Windows document editor for CSC 481. LaTeX math, tables, and images, exported to PDF, Word, and Markdown. Milestone 1 is finished. Milestone 2 is in progress. Headed for the Microsoft Store.",
+      "Local-first Windows document editor. LaTeX math, tables, and images, exported to PDF, Word, and Markdown. Milestone 1 is finished. Milestone 2 is in progress. Headed for the Microsoft Store.",
   },
   {
     name: "Forkcast",
@@ -37,18 +34,6 @@ export const projects = [
       "Android-first nutrition app for a Bluetooth food scale. Logs USDA foods by weight and keeps them on the phone. In design, with implementation starting. Headed for Google Play.",
   },
 ] as const;
-
-export const experience = {
-  role: "Junior QA Analyst",
-  org: "SQA²",
-  dates: "2025–2026",
-  stack: ["Playwright", "Selenium", "TypeScript", "Python", "Java"],
-  bullets: [
-    "Several hundred automated UI, API, and backend tests with Playwright and Selenium.",
-    "Internal reporting sites and Python tools.",
-    "Web, mobile, OTT, and AI products.",
-  ],
-} as const;
 
 export const skillGroups = [
   {
@@ -67,10 +52,4 @@ export const skillGroups = [
     title: "Workflow",
     items: ["Git", "GitLab", "Azure DevOps", "Jira", "Docker"],
   },
-] as const;
-
-export const certifications = [
-  "Unity Junior Programmer",
-  "AWS Academy Graduate (Generative AI Foundations)",
-  "Microsoft MTA: Security Fundamentals",
 ] as const;

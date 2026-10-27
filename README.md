@@ -2,7 +2,7 @@
 
 Personal site for Filliciano Plong: [https://fillicianoplong.github.io](https://fillicianoplong.github.io).
 
-The site is one static page built with Astro, TypeScript, and Tailwind CSS. GitHub Actions publishes it to GitHub Pages.
+The site is one static page built with Astro, TypeScript, and Tailwind CSS. The page is About, Projects, Skills, and Contact. GitHub Actions publishes it to GitHub Pages.
 
 ## Local development
 
@@ -37,7 +37,3 @@ Before the first deploy, set the repository Pages source to GitHub Actions:
 3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
 
 The live site is served from the repository root (`https://fillicianoplong.github.io`), so the Astro `site` is that URL and there is no path prefix.
-
-## Resume
-
-`public/resume.pdf` is a placeholder. Replace that file with the real resume. The nav and the About section already link to `/resume.pdf`.
