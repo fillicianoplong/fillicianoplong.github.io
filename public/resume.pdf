@@ -1,0 +1,51 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+2 0 obj
+<< /Length 365 >>
+stream
+BT
+/F1 36 Tf
+72 680 Td
+(PLACEHOLDER) Tj
+/F1 16 Tf
+0 -36 Td
+(This is not Filliciano Plong's resume.) Tj
+/F1 13 Tf
+0 -28 Td
+(Replace the file public/resume.pdf with the real resume.) Tj
+/F1 13 Tf
+0 -22 Td
+(The site already links to /resume.pdf from the navigation and the About section.) Tj
+/F1 13 Tf
+0 -22 Td
+(This file is only here so the link is not broken.) Tj
+ET
+endstream
+endobj
+3 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R >> >> /Contents 2 0 R >>
+endobj
+4 0 obj
+<< /Type /Pages /Count 1 /Kids [3 0 R] >>
+endobj
+5 0 obj
+<< /Title (PLACEHOLDER resume) /Author (Filliciano Plong) >>
+endobj
+6 0 obj
+<< /Type /Catalog /Pages 4 0 R >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000084 00000 n 
+0000000500 00000 n 
+0000000626 00000 n 
+0000000683 00000 n 
+0000000759 00000 n 
+trailer << /Size 7 /Root 6 0 R /Info 5 0 R >>
+startxref
+808
+%%EOF

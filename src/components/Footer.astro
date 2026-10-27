@@ -1,0 +1,14 @@
+---
+import { site } from "../data/site";
+---
+
+<footer class="border-t border-line">
+  <div class="wrap flex flex-col gap-2 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+    <p>© 2026 {site.name}</p>
+    <p>
+      <a class="underline underline-offset-4" href={site.repo} rel="noreferrer" target="_blank">
+        Site source<span class="sr-only"> (opens in a new tab)</span>
+      </a>
+    </p>
+  </div>
+</footer>
