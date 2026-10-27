@@ -1,0 +1,28 @@
+---
+import { experience } from "../data/site";
+---
+
+<section id="experience" class="section" aria-labelledby="experience-heading">
+  <div class="wrap">
+    <h2 id="experience-heading" class="display text-3xl sm:text-4xl">Experience</h2>
+    <article class="mt-8 max-w-3xl">
+      <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+        <h3 class="display text-2xl">{experience.role}</h3>
+        <p class="font-mono text-sm text-muted">
+          <time datetime="2025">2025</time>–<time datetime="2026">2026</time>
+        </p>
+      </div>
+      <p class="mt-1 text-lg">{experience.org}</p>
+      <ul class="mt-4 list-disc space-y-2 pl-5 leading-relaxed">
+        {experience.bullets.map((bullet) => <li>{bullet}</li>)}
+      </ul>
+      <ul class="mt-5 flex flex-wrap gap-2" aria-label="Tools used in this role">
+        {
+          experience.stack.map((item) => (
+            <li class="bg-chip px-2.5 py-1 font-mono text-sm">{item}</li>
+          ))
+        }
+      </ul>
+    </article>
+  </div>
+</section>

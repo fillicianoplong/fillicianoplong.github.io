@@ -1,0 +1,62 @@
+---
+import { nav, site } from "../data/site";
+---
+
+<header class="site-header">
+  <div class="wrap py-3">
+    <div class="flex items-center justify-between gap-3">
+      <a href="/#about" class="text-base font-semibold tracking-tight">{site.name}</a>
+      <div class="flex items-center gap-x-4 text-sm">
+        <a class="hidden min-h-11 items-center hover:underline md:inline-flex" href={site.github} rel="me noreferrer" target="_blank">
+          GitHub<span class="sr-only"> (opens in a new tab)</span>
+        </a>
+        <a class="hidden min-h-11 items-center hover:underline md:inline-flex" href={site.linkedin} rel="me noreferrer" target="_blank">
+          LinkedIn<span class="sr-only"> (opens in a new tab)</span>
+        </a>
+        <a class="inline-flex min-h-11 items-center font-semibold hover:underline" href="/resume.pdf" target="_blank" rel="noopener">
+          Resume<span class="sr-only"> (PDF, opens in a new tab)</span>
+        </a>
+      <button
+        type="button"
+        data-theme-toggle
+        class="inline-flex size-11 items-center justify-center rounded-full border border-line"
+        aria-label="Toggle color theme"
+      >
+        <svg class="theme-icon-moon size-5" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75">
+          <path d="M16.5 3.5A8.5 8.5 0 1 0 20.5 14 7 7 0 0 1 16.5 3.5Z" stroke-linejoin="round"></path>
+        </svg>
+        <svg class="theme-icon-sun size-5" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75">
+          <circle cx="12" cy="12" r="3.25"></circle>
+          <path stroke-linecap="round" d="M12 3.5v1.75M12 18.75V20.5M4.9 4.9l1.25 1.25M17.85 17.85l1.25 1.25M3.5 12h1.75M18.75 12H20.5M4.9 19.1l1.25-1.25M17.85 6.15l1.25-1.25"></path>
+        </svg>
+      </button>
+      </div>
+    </div>
+    <nav aria-label="Primary" class="mt-1">
+      <ul class="flex flex-wrap gap-x-4 text-sm">
+        {
+          nav.map((item) => (
+            <li>
+              <a class="inline-flex min-h-11 items-center hover:underline" href={item.href}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  import { initThemeToggle } from "../scripts/theme";
+
+  initThemeToggle();
+
+  const header = document.querySelector(".site-header");
+  const markHeader = (): void => {
+    header?.classList.toggle("is-solid", window.scrollY > 16);
+  };
+  markHeader();
+  window.addEventListener("scroll", markHeader, { passive: true });
+</script>

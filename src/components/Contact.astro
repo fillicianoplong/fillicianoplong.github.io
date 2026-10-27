@@ -1,0 +1,36 @@
+---
+import { site } from "../data/site";
+
+const links = [
+  { label: "Email", href: `mailto:${site.email}`, value: site.email, external: false },
+  { label: "LinkedIn", href: site.linkedin, value: "linkedin.com/in/fillicianoplong", external: true },
+  { label: "GitHub", href: site.github, value: "github.com/fillicianoplong", external: true },
+];
+---
+
+<section id="contact" class="section" aria-labelledby="contact-heading">
+  <div class="wrap">
+    <h2 id="contact-heading" class="display text-3xl sm:text-4xl">Contact</h2>
+    <p class="mt-3 max-w-2xl text-muted">Email, LinkedIn, or GitHub.</p>
+    <ul class="mt-8 divide-y divide-line border-y border-line">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              class="flex min-h-16 flex-col justify-center gap-0.5 py-3 hover:underline sm:flex-row sm:items-baseline sm:justify-between"
+              href={link.href}
+              rel={link.external ? "me noreferrer" : undefined}
+              target={link.external ? "_blank" : undefined}
+            >
+              <span class="font-mono text-sm text-muted">{link.label}</span>
+              <span class="text-lg">
+                {link.value}
+                {link.external && <span class="sr-only"> (opens in a new tab)</span>}
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

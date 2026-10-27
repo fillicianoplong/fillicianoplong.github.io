@@ -1,0 +1,23 @@
+---
+import { certifications } from "../data/site";
+---
+
+<section id="education" class="section" aria-labelledby="education-heading">
+  <div class="wrap">
+    <h2 id="education-heading" class="display text-3xl sm:text-4xl">Education</h2>
+    <article class="mt-8 max-w-2xl">
+      <h3 class="display text-2xl">B.S. Computer Science</h3>
+      <p class="mt-2 leading-relaxed">California State University, Dominguez Hills</p>
+      <p class="mt-1 text-muted">Expected <time datetime="2027-06">June 2027</time></p>
+    </article>
+  </div>
+</section>
+
+<section id="certifications" class="section" aria-labelledby="certifications-heading">
+  <div class="wrap">
+    <h2 id="certifications-heading" class="display text-3xl sm:text-4xl">Certifications</h2>
+    <ul class="mt-6 max-w-2xl space-y-2">
+      {certifications.map((item) => <li>{item}</li>)}
+    </ul>
+  </div>
+</section>
