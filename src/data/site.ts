@@ -33,6 +33,14 @@ export const projects = [
     summary:
       "Android-first nutrition app for a Bluetooth food scale. Logs USDA foods by weight and keeps them on the phone. In design, with implementation starting. Headed for Google Play.",
   },
+  {
+    name: "OTCP (Open TCG Project)",
+    href: "https://github.com/fillicianoplong/otcp",
+    status: "In progress",
+    stack: ["TypeScript", "React", "Vite", "Tailwind CSS", "Supabase"],
+    summary:
+      "A fast, mobile-first card reference and deck builder for trading card game players, starting with Yu-Gi-Oh!. Search and filter every card, build decks with live format legality and ban lists, plan card show trips with want lists and price totals, and track your collection. Requirements, architecture, UI design, and the implementation plan are done, and coding is starting.",
+  },
 ] as const;
 
 export const skillGroups = [
