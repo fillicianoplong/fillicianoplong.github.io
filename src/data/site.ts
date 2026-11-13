@@ -16,32 +16,45 @@ export const nav = [
   { href: "/#contact", label: "Contact" },
 ] as const;
 
-export const projects = [
-  {
-    name: "Obelisk",
-    href: "https://github.com/fillicianoplong/obelisk",
-    status: "In progress",
-    stack: ["TypeScript", "React", "Electron"],
-    summary:
-      "Local-first Windows document editor. LaTeX math, tables, and images, exported to PDF, Word, and Markdown. Milestone 1 is finished. Milestone 2 is in progress. Headed for the Microsoft Store.",
-  },
+export type Project = {
+  name: string;
+  href?: string;
+  live?: string;
+  stack: readonly string[];
+  summary: string;
+};
+
+export const projects: readonly Project[] = [
   {
     name: "Forkcast",
     href: "https://github.com/fillicianoplong/forkcast",
-    status: "In progress",
     stack: ["TypeScript", "React Native", "Expo"],
     summary:
-      "Android-first nutrition app for a Bluetooth food scale. Logs USDA foods by weight and keeps them on the phone. In design, with implementation starting. Headed for Google Play.",
+      "An Android-first nutrition app for a Bluetooth food scale. Weigh food, log it against USDA FoodData Central, and track it toward nutrient goals, with data stored locally on the phone.",
+  },
+  {
+    name: "Obelisk",
+    href: "https://github.com/fillicianoplong/obelisk",
+    stack: ["TypeScript", "React", "Electron"],
+    summary:
+      "A local-first Windows document editor for laying out real pages, with LaTeX math, tables, and images. Print or export to PDF, Word, and Markdown.",
   },
   {
     name: "OTCP (Open TCG Project)",
     href: "https://github.com/fillicianoplong/otcp",
-    status: "In progress",
+    live: "https://fillicianoplong.github.io/otcp/",
     stack: ["TypeScript", "React", "Vite", "Tailwind CSS", "Supabase"],
     summary:
-      "A fast, mobile-first card reference and deck builder for trading card game players, starting with Yu-Gi-Oh!. Search and filter every card, build decks with live format legality and ban lists, plan card show trips with want lists and price totals, and track your collection. Requirements, architecture, UI design, and the implementation plan are done, and coding is starting.",
+      "A fast, mobile-first card reference and deck builder for trading card game players. Starting with Yu-Gi-Oh!, it covers card search and filters, deck building with format legality and ban lists, want lists with price totals, and collection tracking.",
   },
-] as const;
+  {
+    name: "Chronicle",
+    href: "https://github.com/fillicianoplong/chronicle",
+    stack: ["TypeScript", "React", "Vite", "Wikidata"],
+    summary:
+      "A searchable, date-sorted timeline of anything on Wikidata. Search a person, a war, or a city to pull every linked dated item into a timeline you can filter, share by URL, and export as JSON.",
+  },
+];
 
 export const skillGroups = [
   {
