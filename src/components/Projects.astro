@@ -9,22 +9,29 @@ import { projects } from "../data/site";
       {
         projects.map((project) => (
           <article class="flex flex-col border border-line bg-surface p-6 sm:p-7">
-            <div class="flex items-baseline justify-between gap-4">
-              <h3 class="display text-2xl">{project.name}</h3>
-              <p class="shrink-0 font-mono text-sm text-muted">{project.status}</p>
-            </div>
+            <h3 class="display text-2xl">{project.name}</h3>
             <p class="mt-4 leading-relaxed">{project.summary}</p>
             <ul class="mt-5 flex flex-wrap gap-2" aria-label={`${project.name} stack`}>
               {project.stack.map((item) => (
                 <li class="bg-chip px-2.5 py-1 font-mono text-sm">{item}</li>
               ))}
             </ul>
-            <p class="mt-6">
-              <a class="underline underline-offset-4" href={project.href} rel="noreferrer" target="_blank">
-                GitHub
-                <span class="sr-only"> for {project.name} (opens in a new tab)</span>
-              </a>
-            </p>
+            {(project.href || project.live) && (
+              <p class="mt-6 flex flex-wrap gap-x-5 gap-y-1">
+                {project.href && (
+                  <a class="underline underline-offset-4" href={project.href} rel="noreferrer" target="_blank">
+                    GitHub
+                    <span class="sr-only"> for {project.name} (opens in a new tab)</span>
+                  </a>
+                )}
+                {project.live && (
+                  <a class="underline underline-offset-4" href={project.live} rel="noreferrer" target="_blank">
+                    Live
+                    <span class="sr-only"> for {project.name} (opens in a new tab)</span>
+                  </a>
+                )}
+              </p>
+            )}
           </article>
         ))
       }
