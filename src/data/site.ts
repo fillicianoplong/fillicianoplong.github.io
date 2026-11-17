@@ -26,11 +26,12 @@ export type Project = {
 
 export const projects: readonly Project[] = [
   {
-    name: "Forkcast",
-    href: "https://github.com/fillicianoplong/forkcast",
-    stack: ["TypeScript", "React Native", "Expo"],
+    name: "OTCP (Open TCG Project)",
+    href: "https://github.com/fillicianoplong/otcp",
+    live: "https://fillicianoplong.github.io/otcp/",
+    stack: ["TypeScript", "React", "Vite", "Tailwind CSS", "Supabase"],
     summary:
-      "An Android-first nutrition app for a Bluetooth food scale. Weigh food, log it against USDA FoodData Central, and track it toward nutrient goals, with data stored locally on the phone.",
+      "A fast, mobile-first card reference and deck builder for trading card game players. Starting with Yu-Gi-Oh!, it covers card search and filters, deck building with format legality and ban lists, want lists with price totals, and collection tracking.",
   },
   {
     name: "Obelisk",
@@ -40,12 +41,11 @@ export const projects: readonly Project[] = [
       "A local-first Windows document editor for laying out real pages, with LaTeX math, tables, and images. Print or export to PDF, Word, and Markdown.",
   },
   {
-    name: "OTCP (Open TCG Project)",
-    href: "https://github.com/fillicianoplong/otcp",
-    live: "https://fillicianoplong.github.io/otcp/",
-    stack: ["TypeScript", "React", "Vite", "Tailwind CSS", "Supabase"],
+    name: "Gram",
+    href: "https://github.com/fillicianoplong/gram",
+    stack: ["TypeScript", "React Native", "Expo"],
     summary:
-      "A fast, mobile-first card reference and deck builder for trading card game players. Starting with Yu-Gi-Oh!, it covers card search and filters, deck building with format legality and ban lists, want lists with price totals, and collection tracking.",
+      "An Android-first nutrition app for a Bluetooth food scale. Weigh food, log it against USDA FoodData Central, and track it toward nutrient goals, with data stored locally on the phone.",
   },
   {
     name: "Chronicle",
