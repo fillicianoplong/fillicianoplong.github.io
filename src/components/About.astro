@@ -11,6 +11,9 @@ const links = [
 
 <section id="about" class="about">
   <div class="about-wash" aria-hidden="true"></div>
+  <div class="about-stage wrap" aria-hidden="true">
+    <canvas class="about-canvas" data-about-canvas></canvas>
+  </div>
   <div class="about-copy wrap">
     <h1 class="display text-[clamp(2.75rem,8vw,5.75rem)] leading-[0.98]">{site.name}</h1>
     <p class="mt-4 max-w-xl text-lg leading-snug sm:text-xl">Building apps, websites, and test automation.</p>
@@ -33,3 +36,17 @@ const links = [
     </ul>
   </div>
 </section>
+
+<script>
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      void import("../scripts/about-canvas")
+        .then(({ startAboutCanvas }) => {
+          startAboutCanvas();
+        })
+        .catch(() => {
+          document.querySelector("[data-about-canvas]")?.remove();
+        });
+    });
+  });
+</script>

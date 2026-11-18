@@ -160,6 +160,25 @@ body {
     linear-gradient(165deg, var(--wash-b), var(--wash-c) 52%, var(--wash-d));
 }
 
+.about-stage {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  pointer-events: none;
+}
+
+.about-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: radial-gradient(closest-side, #000 46%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 46%, transparent 100%);
+}
+
 .about-copy {
   position: relative;
   z-index: 2;
@@ -248,7 +267,8 @@ body {
 }
 
 @media (forced-colors: active) {
-  .about-wash {
+  .about-wash,
+  .about-stage {
     display: none;
   }
 }
@@ -257,6 +277,7 @@ body {
   .site-header,
   .skip-link,
   .about-wash,
+  .about-stage,
   [data-theme-toggle] {
     display: none;
   }
