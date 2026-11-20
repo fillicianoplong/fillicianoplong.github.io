@@ -26,7 +26,7 @@ export type Project = {
 
 export const projects: readonly Project[] = [
   {
-    name: "OTCP (Open TCG Project)",
+    name: "OTCP",
     href: "https://github.com/fillicianoplong/otcp",
     live: "https://fillicianoplong.github.io/otcp/",
     stack: ["TypeScript", "React", "Vite", "Tailwind CSS", "Supabase"],
